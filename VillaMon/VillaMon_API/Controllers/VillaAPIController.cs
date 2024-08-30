@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.JsonPatch;
+using Microsoft.AspNetCore.Mvc;
 using VillaMon_API.Data;
 using VillaMon_API.Models.Dto;
 
@@ -117,5 +118,53 @@ namespace VillaMon_API.Controllers
 
             return Ok(existingVilla);
         }
+
+
+
+        [HttpPatch("{id:int}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public ActionResult<VillaDTO> UpdatePartialVilla(int id, JsonPatchDocument<VillaDTO> patchDocument)
+        {
+            var existingVilla = VillaStore.villaList.FirstOrDefault(v => v.Id == id);
+            if (existingVilla == null)
+            {
+                return NotFound();
+            }
+
+            var villaToPatch = new VillaDTO
+            {
+                Id = existingVilla.Id,
+                Name = existingVilla.Name,
+                Occupancy = existingVilla.Occupancy,
+                Sqft = existingVilla.Sqft
+            };
+
+            patchDocument.ApplyTo(villaToPatch, ModelState);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            // Check if the updated name already exists
+            if (VillaStore.villaList.Any(v => v.Name.ToLower() == villaToPatch.Name.ToLower() && v.Id != id))
+            {
+                return BadRequest("Villa name already exists");
+            }
+
+            existingVilla.Name = villaToPatch.Name;
+            existingVilla.Occupancy = villaToPatch.Occupancy;
+            existingVilla.Sqft = villaToPatch.Sqft;
+
+            return Ok(existingVilla);
+        }
+
+
+
+
+
+
     }
 }

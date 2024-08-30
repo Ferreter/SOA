@@ -31,3 +31,7 @@ C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\obj\Debug\net8
 C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\obj\Debug\net8.0\VillaMon_API.pdb
 C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\obj\Debug\net8.0\VillaMon_API.genruntimeconfig.cache
 C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\obj\Debug\net8.0\ref\VillaMon_API.dll
+C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
