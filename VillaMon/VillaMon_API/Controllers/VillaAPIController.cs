@@ -34,5 +34,25 @@ namespace VillaMon_API.Controllers
 
             return Ok(villa);
         }
+
+        [HttpPost]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        public ActionResult<VillaDTO> CreateVilla(VillaDTO villaDto)
+        {
+            if (villaDto == null)
+            {
+                return BadRequest("Villa is null");
+            }
+            if (villaDto.Id >0)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+            villaDto.Id = VillaStore.villaList.OrderByDescending(v => v.Id).FirstOrDefault().Id + 1;
+            VillaStore.villaList.Add(villaDto);
+
+            return CreatedAtAction(nameof(GetVilla), new { id = villaDto.Id }, villaDto);
+        }
     }
 }
