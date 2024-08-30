@@ -9,3 +9,5 @@ VillaMon/.vs/VillaMon/v17/.suo
 *.cache
 *.user
 VillaMon/.vs/VillaMon/v17/.suo
+*.dll
+*.BuildWithSkipAnalyzers
