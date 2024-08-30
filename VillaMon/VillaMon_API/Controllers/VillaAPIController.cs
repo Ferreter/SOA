@@ -41,14 +41,26 @@ namespace VillaMon_API.Controllers
         [ProducesResponseType(500)]
         public ActionResult<VillaDTO> CreateVilla(VillaDTO villaDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             if (villaDto == null)
             {
                 return BadRequest("Villa is null");
             }
-            if (villaDto.Id >0)
+            if (villaDto.Id > 0)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
+
+            // Check if the name already exists
+            if (VillaStore.villaList.Any(v => v.Name.ToLower() == villaDto.Name.ToLower() )
+            {
+                return BadRequest("Villa name already exists");
+            }
+
             villaDto.Id = VillaStore.villaList.OrderByDescending(v => v.Id).FirstOrDefault().Id + 1;
             VillaStore.villaList.Add(villaDto);
 
