@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Moq;
+using NUnit.Framework;
 using VillaMon_API.Data;
 using VillaMon_API.Models;
 using VillaMon_API.Models.Dto;
@@ -18,31 +20,7 @@ namespace VillaMon_API.Controllers
         {
             _db = db;
         }
-        [HttpGet("ByOccupancy/{occupancy}")]
-        [ProducesResponseType(200)]
-        [ProducesResponseType(404)]
-        public ActionResult<IEnumerable<VillaDTO>> GetVillasByOccupancy(int occupancy)
-        {
-            var villas = _db.Villas.Where(v => v.Occupancy >= occupancy).ToList();
-            if (!villas.Any())
-            {
-                return NotFound("No villas found accommodating the specified number of occupants");
-            }
-            return Ok(villas);
-        }
-
-        [HttpGet("ByAmenity/{amenity}")]
-        [ProducesResponseType(200)]
-        [ProducesResponseType(404)]
-        public ActionResult<IEnumerable<VillaDTO>> GetVillasByAmenity(string amenity)
-        {
-            var villas = _db.Villas.Where(v => v.Amenity.ToLower().Contains(amenity.ToLower())).ToList();
-            if (!villas.Any())
-            {
-                return NotFound("No villas found with the specified amenity");
-            }
-            return Ok(villas);
-        }
+       
         [HttpGet]
         [ProducesResponseType(200)]
         public ActionResult<IEnumerable<VillaDTO>> GetVillas()
@@ -67,6 +45,8 @@ namespace VillaMon_API.Controllers
 
             return Ok(villa);
         }
+
+
 
         [HttpPost]
         [ProducesResponseType(201)]
@@ -257,4 +237,6 @@ namespace VillaMon_API.Controllers
 
 
     }
+
+
 }
