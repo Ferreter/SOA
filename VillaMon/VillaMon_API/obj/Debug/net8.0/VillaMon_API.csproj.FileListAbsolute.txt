@@ -35,3 +35,13 @@ C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8
 C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8.0\Serilog.dll
+C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API\bin\Debug\net8.0\Serilog.Sinks.File.dll
