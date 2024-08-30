@@ -249,3 +249,6 @@ VALUES (N'20240830224235_AddVillaTable', N'8.0.8');
 2024-08-30 23:44:21.436 +01:00 [DBG] 'ApplicationDbContext' disposed.
 2024-08-30 23:44:21.437 +01:00 [DBG] Disposing connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
 2024-08-30 23:44:21.437 +01:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-08-30 23:47:59.418 +01:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-08-30 23:47:59.664 +01:00 [DBG] Entity Framework Core 8.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.8' with options: None
+2024-08-30 23:47:59.951 +01:00 [DBG] 'ApplicationDbContext' disposed.
