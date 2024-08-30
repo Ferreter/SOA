@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VillaMon_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ce8a49475aa1e6f141f7f64f5e04ccda0dcb2c6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1aa7df3661394505966f83a7774de0ee6f7a114d")]
 [assembly: System.Reflection.AssemblyProductAttribute("VillaMon_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VillaMon_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
