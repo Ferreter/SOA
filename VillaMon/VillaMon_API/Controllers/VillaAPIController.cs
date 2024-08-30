@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using VillaMon_API.Data;
-using VillaMon_API.Models;
+using VillaMon_API.Models.Dto;
 
 namespace VillaMon_API.Controllers
 {
@@ -23,10 +23,6 @@ namespace VillaMon_API.Controllers
         public ActionResult<VillaDTO> GetVilla(int id)
         {
             var villa = VillaStore.villaList.FirstOrDefault(v => v.Id == id);
-            if (id == null)
-            {
-                return BadRequest("Villa not found");
-            }
             if (villa == null)
             {
                 return NotFound();
@@ -56,7 +52,7 @@ namespace VillaMon_API.Controllers
             }
 
             // Check if the name already exists
-            if (VillaStore.villaList.Any(v => v.Name.ToLower() == villaDto.Name.ToLower() )
+            if (VillaStore.villaList.Any(v => v.Name.ToLower() == villaDto.Name.ToLower()))
             {
                 return BadRequest("Villa name already exists");
             }
@@ -65,6 +61,61 @@ namespace VillaMon_API.Controllers
             VillaStore.villaList.Add(villaDto);
 
             return CreatedAtAction(nameof(GetVilla), new { id = villaDto.Id }, villaDto);
+        }
+
+
+        [HttpDelete("{id:int}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public ActionResult DeleteVilla(int id)
+        {
+            var villa = VillaStore.villaList.FirstOrDefault(v => v.Id == id);
+            if (id <= 0)
+            {
+                return BadRequest("Invalid villa id");
+            }
+            if (villa == null)
+            {
+                return NotFound();
+            }
+
+            VillaStore.villaList.Remove(villa);
+
+            return NoContent();
+        }
+
+        [HttpPut("{id:int}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+
+        public ActionResult<VillaDTO> UpdateVilla(int id, VillaDTO updatedVillaDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var existingVilla = VillaStore.villaList.FirstOrDefault(v => v.Id == id);
+            if (existingVilla == null)
+            {
+                return NotFound();
+            }
+
+            // Check if the updated name already exists
+            if (VillaStore.villaList.Any(v => v.Name.ToLower() == updatedVillaDto.Name.ToLower() && v.Id != id))
+            {
+                return BadRequest("Villa name already exists");
+            }
+
+            existingVilla.Name = updatedVillaDto.Name;
+            existingVilla.Occupancy = updatedVillaDto.Occupancy;
+            existingVilla.Sqft = updatedVillaDto.Sqft;
+
+
+            return Ok(existingVilla);
         }
     }
 }
