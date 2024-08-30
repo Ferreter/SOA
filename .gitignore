@@ -1,0 +1,13 @@
+
+*.cache
+*.vsidx
+*.db-shm
+*.db-wal
+*.vsidx
+VillaMon/.vs/VillaMon/v17/.suo
+VillaMon/VillaMon_API/obj/Debug/net8.0/VillaMon_API.AssemblyInfo.cs
+VillaMon/VillaMon_API/obj/Debug/net8.0/VillaMon_API.AssemblyInfoInputs.cache
+VillaMon/VillaMon_API/obj/Debug/net8.0/VillaMon_API.csproj.CoreCompileInputs.cache
+VillaMon/VillaMon_API/obj/Debug/net8.0/VillaMon_API.sourcelink.json
+VillaMon/.vs/VillaMon/v17/DocumentLayout.backup.json
+/VillaMon/.vs
