@@ -11,11 +11,7 @@ namespace VillaMon_API.Controllers
     [Route("api/VillaAPI")]
     public class VillaAPIController : ControllerBase
     {
-        private readonly ILogger<VillaAPIController> _logger;
-        public VillaAPIController(ILogger<VillaAPIController> logger) {
-            _logger = logger;
 
-        }
 
         private readonly ApplicationDbContext _db;
         public VillaAPIController(ApplicationDbContext db)
@@ -27,7 +23,7 @@ namespace VillaMon_API.Controllers
         [ProducesResponseType(200)]
         public ActionResult<IEnumerable<VillaDTO>> GetVillas()
         {
-            _logger.LogInformation("Getting all villas");
+  
             return Ok(_db.Villas);
         }
 
@@ -37,14 +33,14 @@ namespace VillaMon_API.Controllers
         [ProducesResponseType(404)]
         public ActionResult<VillaDTO> GetVilla(int id)
         {
-            _logger.LogInformation($"Getting villa with id {id}");
+
             var villa = _db.Villas.FirstOrDefault(v => v.Id == id);
             if (villa == null)
             {
-                _logger.LogWarning($"Villa with id {id} not found");
+
                 return NotFound();
             }
-            _logger.BeginScope($"Villa with id {id} found");
+
             return Ok(villa);
         }
 
@@ -54,28 +50,28 @@ namespace VillaMon_API.Controllers
         [ProducesResponseType(500)]
         public ActionResult<VillaDTO> CreateVilla(VillaDTO villaDto)
         {
-            _logger.LogInformation("Creating a new villa");
+
             if (!ModelState.IsValid)
             {
-                _logger.LogWarning("Model state is invalid");
+
                 return BadRequest(ModelState);
             }
 
             if (villaDto == null)
             {
-                _logger.LogWarning("Villa is null");
+
                 return BadRequest("Villa is null");
             }
             if (villaDto.Id > 0)
             {
-                _logger.LogWarning("Villa id is greater than 0");
+
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
 
             // Check if the name already exists
             if (_db.Villas.Any(v => v.Name.ToLower() == villaDto.Name.ToLower()))
             {
-                _logger.LogWarning("Villa name already exists");
+
                 return BadRequest("Villa name already exists");
             }
 
@@ -96,7 +92,6 @@ namespace VillaMon_API.Controllers
 
             _db.Villas.AddAsync(model);
             _db.SaveChanges();
-            _logger.LogInformation($"Villa with id {villaDto.Id} created");
             return CreatedAtAction(nameof(GetVilla), new { id = villaDto.Id }, villaDto);
         }
 
@@ -111,19 +106,17 @@ namespace VillaMon_API.Controllers
             var villa = _db.Villas.FirstOrDefault(v => v.Id == id);
             if (id <= 0)
             {
-                _logger.LogWarning("Invalid villa id");
                 return BadRequest("Invalid villa id");
             }
             if (villa == null)
             {
-                _logger.LogWarning($"Villa with id {id} not found");
                 return NotFound();
             }
 
             _db.Villas.Remove(villa);
             _db.SaveChanges();
 
-            _logger.LogInformation($"Villa with id {id} deleted");
+
             return NoContent();
         }
 
@@ -134,24 +127,24 @@ namespace VillaMon_API.Controllers
 
         public ActionResult<VillaDTO> UpdateVilla(int id, VillaDTO villaDto)
         {
-            _logger.LogInformation($"Updating villa with id {id}");
+
             if (!ModelState.IsValid)
             {
-                _logger.LogWarning("Model state is invalid");
+
                 return BadRequest(ModelState);
             }
 
             var existingVilla = _db.Villas.FirstOrDefault(v => v.Id == id);
             if (existingVilla == null)
             {
-                _logger.LogWarning($"Villa with id {id} not found");
+
                 return NotFound();
             }
 
             // Check if the updated name already exists
             if (_db.Villas.Any(v => v.Name.ToLower() == villaDto.Name.ToLower() && v.Id != id))
             {
-                _logger.LogWarning("Villa name already exists");
+
                 return BadRequest("Villa name already exists");
             }
 
@@ -171,7 +164,7 @@ namespace VillaMon_API.Controllers
             _db.Villas.Update(model);
             _db.SaveChanges();
 
-            _logger.LogInformation($"Villa with id {id} updated");
+
             return Ok(existingVilla);
         }
 
