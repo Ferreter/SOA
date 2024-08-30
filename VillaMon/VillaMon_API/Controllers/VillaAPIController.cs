@@ -10,20 +10,29 @@ namespace VillaMon_API.Controllers
     public class VillaAPIController : ControllerBase
     {
         [HttpGet]
-        public IEnumerable<VillaDTO> GetVillas()
+        [ProducesResponseType(200)]
+        public ActionResult<IEnumerable<VillaDTO>> GetVillas()
         {
-            return VillaStore.villaList;
+            return Ok(VillaStore.villaList);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
         public ActionResult<VillaDTO> GetVilla(int id)
         {
             var villa = VillaStore.villaList.FirstOrDefault(v => v.Id == id);
+            if (id == null)
+            {
+                return BadRequest("Villa not found");
+            }
             if (villa == null)
             {
                 return NotFound();
             }
-            return villa;
+
+            return Ok(villa);
         }
     }
 }

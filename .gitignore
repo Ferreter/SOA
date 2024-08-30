@@ -11,3 +11,9 @@ VillaMon/VillaMon_API/obj/Debug/net8.0/VillaMon_API.csproj.CoreCompileInputs.cac
 VillaMon/VillaMon_API/obj/Debug/net8.0/VillaMon_API.sourcelink.json
 VillaMon/.vs/VillaMon/v17/DocumentLayout.backup.json
 /VillaMon/.vs
+/VillaMon/.vs*
+/VillaMon/.vs/VillaMon/v17
+/VillaMon/VillaMon_API/bin
+/VillaMon/VillaMon_API/bin/Debug
+/VillaMon/VillaMon_API/bin/Debug/net8.0
+/VillaMon/VillaMon_API/bin/Debug/net8.0

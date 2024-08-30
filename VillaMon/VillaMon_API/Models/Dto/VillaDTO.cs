@@ -1,4 +1,4 @@
-﻿namespace VillaMon_API.Models
+﻿namespace VillaMon_API.Models.Dto
 {
     public class VillaDTO
     {
