@@ -72,5 +72,83 @@ namespace VillaMon_API.Tests
             // Assert
             Assert.IsType<NotFoundResult>(result.Result);
         }
+        [Fact]
+        public void AddBooking_ValidBooking_ShouldReturnCreatedAtAction()
+        {
+            // Arrange
+            var newBooking = new BookingDTO
+            {
+                VillaId = 1,
+                CheckInDate = System.DateTime.Now.AddDays(1),
+                CheckOutDate = System.DateTime.Now.AddDays(3),
+                GuestCount = 2
+            };
+
+            // Act
+            var result = _controller.AddBooking(newBooking);
+
+            // Assert
+            var createdAtActionResult = Assert.IsType<CreatedAtActionResult>(result);
+            var booking = Assert.IsType<BookingDTO>(createdAtActionResult.Value);
+            Assert.Equal(newBooking.VillaId, booking.VillaId);
+        }
+
+        [Fact]
+        public void UpdateBooking_ExistingId_ShouldReturnNoContent()
+        {
+            // Arrange
+            var updatedBooking = new BookingDTO
+            {
+                VillaId = 2,
+                CheckInDate = System.DateTime.Now.AddDays(5),
+                CheckOutDate = System.DateTime.Now.AddDays(8),
+                GuestCount = 3
+            };
+
+            // Act
+            var result = _controller.UpdateBooking(1, updatedBooking);
+
+            // Assert
+            Assert.IsType<NoContentResult>(result);
+        }
+
+        [Fact]
+        public void UpdateBooking_NonExistingId_ShouldReturnNotFound()
+        {
+            // Arrange
+            var updatedBooking = new BookingDTO
+            {
+                VillaId = 2,
+                CheckInDate = System.DateTime.Now.AddDays(5),
+                CheckOutDate = System.DateTime.Now.AddDays(8),
+                GuestCount = 3
+            };
+
+            // Act
+            var result = _controller.UpdateBooking(99, updatedBooking); // Assuming 99 is a non-existing ID
+
+            // Assert
+            Assert.IsType<NotFoundResult>(result);
+        }
+
+        [Fact]
+        public void DeleteBooking_ExistingId_ShouldReturnNoContent()
+        {
+            // Act
+            var result = _controller.DeleteBooking(1);
+
+            // Assert
+            Assert.IsType<NoContentResult>(result);
+        }
+
+        [Fact]
+        public void DeleteBooking_NonExistingId_ShouldReturnNotFound()
+        {
+            // Act
+            var result = _controller.DeleteBooking(99); // Assuming 99 is a non-existing ID
+
+            // Assert
+            Assert.IsType<NotFoundResult>(result);
+        }
     }
 }
