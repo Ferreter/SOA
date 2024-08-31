@@ -40,7 +40,6 @@
                 <td>@booking.CheckInDate.ToShortDateString()</td>
                 <td>@booking.CheckOutDate.ToShortDateString()</td>
                 <td>
-                    <button @onclick="() => EditBooking(booking)">Edit</button>
                     <button @onclick="() => DeleteBooking(booking.BookingId)">Delete</button>
                 </td>
             </tr>
@@ -69,10 +68,6 @@
         await LoadBookings();
     }
 
-    private async Task EditBooking(BookingDTO booking)
-    {
-        // Logic to edit booking (could open a modal or redirect to another page)
-    }
 
     private async Task DeleteBooking(int id)
     {
