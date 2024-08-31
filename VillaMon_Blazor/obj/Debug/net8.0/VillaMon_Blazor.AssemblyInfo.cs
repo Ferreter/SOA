@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VillaMon_Blazor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd19a6f75dff5b9ea08e99b028491f8ef372d586")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4136fc99135002aca79f8308e74eb73ef8860ca4")]
 [assembly: System.Reflection.AssemblyProductAttribute("VillaMon_Blazor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VillaMon_Blazor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
