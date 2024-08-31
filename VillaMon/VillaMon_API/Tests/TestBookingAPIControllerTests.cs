@@ -48,7 +48,7 @@ namespace VillaMon_API.Tests
             var result = _controller.GetBookingById(1);
 
             // Assert
-            var okResult = Assert.IsType<OkObjectResult>(result);
+            var okResult = Assert.IsType<OkObjectResult>(result.Result);
             var booking = Assert.IsType<BookingDTO>(okResult.Value);
             Assert.Equal(1, booking.BookingId);
         }
@@ -60,7 +60,7 @@ namespace VillaMon_API.Tests
             var result = _controller.GetBookingById(99); // Assuming 99 is a non-existing ID
 
             // Assert
-            Assert.IsType<NotFoundResult>(result);
+            Assert.IsType<NotFoundResult>(result.Result);
         }
 
         [Fact]
@@ -70,7 +70,7 @@ namespace VillaMon_API.Tests
             var result = _controller.GetBookingById(-1); // Negative ID for invalid test
 
             // Assert
-            Assert.IsType<NotFoundResult>(result);
+            Assert.IsType<NotFoundResult>(result.Result);
         }
     }
 }
