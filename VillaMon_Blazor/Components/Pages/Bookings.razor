@@ -1,0 +1,77 @@
+﻿@page "/bookings"
+@inject HttpClient Http
+@using VillaMon_API.Models.Dto
+
+<h3>Booking Management</h3>
+
+<!-- Booking Form -->
+<EditForm Model="@newBooking" OnValidSubmit="@CreateBooking">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputNumber @bind-Value="newBooking.VillaId" placeholder="Villa ID" />
+    <InputDate @bind-Value="newBooking.CheckInDate" placeholder="Check-in Date" />
+    <InputDate @bind-Value="newBooking.CheckOutDate" placeholder="Check-out Date" />
+    <InputNumber @bind-Value="newBooking.GuestCount" placeholder="Guest Count" />
+    <InputText @bind-Value="newBooking.GuestName" placeholder="Guest Name" />
+    <InputText @bind-Value="newBooking.GuestEmail" placeholder="Guest Email" />
+    <InputText @bind-Value="newBooking.PaymentStatus" placeholder="Payment Status" />
+
+    <button type="submit">Add Booking</button>
+</EditForm>
+
+<!-- Booking List -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>Villa ID</th>
+            <th>Guest Name</th>
+            <th>Check-in Date</th>
+            <th>Check-out Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var booking in bookings)
+        {
+            <tr>
+                <td>@booking.VillaId</td>
+                <td>@booking.GuestName</td>
+                <td>@booking.CheckInDate.ToShortDateString()</td>
+                <td>@booking.CheckOutDate.ToShortDateString()</td>
+                <td>
+                    <button @onclick="() => DeleteBooking(booking.BookingId)">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private List<BookingDTO> bookings = new();
+    private BookingDTO newBooking = new BookingDTO();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadBookings();
+    }
+
+    private async Task LoadBookings()
+    {
+        bookings = await Http.GetFromJsonAsync<List<BookingDTO>>("BookingAPI");
+    }
+
+    private async Task CreateBooking()
+    {
+        await Http.PostAsJsonAsync("BookingAPI", newBooking);
+        newBooking = new BookingDTO();
+        await LoadBookings();
+    }
+
+
+    private async Task DeleteBooking(int id)
+    {
+         Http.DeleteAsync($"BookingAPI/{id}");
+        await LoadBookings();
+    }
+}

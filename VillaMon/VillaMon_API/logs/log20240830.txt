@@ -77,3 +77,178 @@ System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport 
 2024-08-30 21:32:06.527 +01:00 [INF] Executed action VillaMon_API.Controllers.VillaAPIController.GetVillas (VillaMon_API) in 234.7385ms
 2024-08-30 21:32:06.529 +01:00 [INF] Executed endpoint 'VillaMon_API.Controllers.VillaAPIController.GetVillas (VillaMon_API)'
 2024-08-30 21:32:06.529 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/api/VillaAPI - 200 157 application/json; charset=utf-8 276.1859ms
+2024-08-30 23:42:34.610 +01:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-08-30 23:42:34.849 +01:00 [DBG] Entity Framework Core 8.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.8' with options: None
+2024-08-30 23:42:35.112 +01:00 [DBG] 'ApplicationDbContext' disposed.
+2024-08-30 23:43:14.828 +01:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-08-30 23:43:15.074 +01:00 [DBG] Entity Framework Core 8.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.8' with options: None
+2024-08-30 23:43:15.085 +01:00 [DBG] Creating DbConnection.
+2024-08-30 23:43:15.109 +01:00 [DBG] Created DbConnection. (22ms).
+2024-08-30 23:43:15.111 +01:00 [DBG] Migrating using database 'VillaMon' on server '.'.
+2024-08-30 23:43:15.114 +01:00 [DBG] Opening connection to database 'VillaMon' on server '.'.
+2024-08-30 23:43:31.604 +01:00 [DBG] An error occurred using the connection to database 'VillaMon' on server '.'.
+2024-08-30 23:43:31.606 +01:00 [DBG] 'ApplicationDbContext' disposed.
+2024-08-30 23:43:31.608 +01:00 [DBG] Disposing connection to database 'VillaMon' on server '.'.
+2024-08-30 23:43:31.611 +01:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-08-30 23:44:20.750 +01:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-08-30 23:44:20.955 +01:00 [DBG] Entity Framework Core 8.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.8' with options: None
+2024-08-30 23:44:20.962 +01:00 [DBG] Creating DbConnection.
+2024-08-30 23:44:20.979 +01:00 [DBG] Created DbConnection. (14ms).
+2024-08-30 23:44:20.981 +01:00 [DBG] Migrating using database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:20.983 +01:00 [DBG] Opening connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.065 +01:00 [DBG] An error occurred using the connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.065 +01:00 [DBG] Opening connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.066 +01:00 [DBG] An error occurred using the connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.080 +01:00 [DBG] Creating DbConnection.
+2024-08-30 23:44:21.080 +01:00 [DBG] Created DbConnection. (0ms).
+2024-08-30 23:44:21.080 +01:00 [DBG] Opening connection to database 'master' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.090 +01:00 [DBG] Opened connection to database 'master' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.092 +01:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-08-30 23:44:21.095 +01:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (2ms).
+2024-08-30 23:44:21.096 +01:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (4ms).
+2024-08-30 23:44:21.099 +01:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [VillaMon];
+2024-08-30 23:44:21.267 +01:00 [INF] Executed DbCommand (167ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [VillaMon];
+2024-08-30 23:44:21.268 +01:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-08-30 23:44:21.268 +01:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-30 23:44:21.268 +01:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-30 23:44:21.268 +01:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [VillaMon] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2024-08-30 23:44:21.325 +01:00 [INF] Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [VillaMon] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2024-08-30 23:44:21.326 +01:00 [DBG] Closing connection to database 'master' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.330 +01:00 [DBG] Closed connection to database 'master' on server '(localdb)\MSSQLLocalDB' (2ms).
+2024-08-30 23:44:21.331 +01:00 [DBG] Disposing connection to database 'master' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.332 +01:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-08-30 23:44:21.332 +01:00 [DBG] Opening connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.336 +01:00 [DBG] Opened connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.336 +01:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-08-30 23:44:21.336 +01:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-30 23:44:21.336 +01:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-30 23:44:21.336 +01:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-30 23:44:21.341 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-30 23:44:21.341 +01:00 [DBG] Closing connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.341 +01:00 [DBG] Closed connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB' (0ms).
+2024-08-30 23:44:21.370 +01:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-08-30 23:44:21.370 +01:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-30 23:44:21.370 +01:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-30 23:44:21.370 +01:00 [DBG] Opening connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.371 +01:00 [DBG] Opened connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.371 +01:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2024-08-30 23:44:21.377 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2024-08-30 23:44:21.377 +01:00 [DBG] Closing connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.377 +01:00 [DBG] Closed connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB' (0ms).
+2024-08-30 23:44:21.378 +01:00 [DBG] Opening connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.378 +01:00 [DBG] Opened connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.378 +01:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-08-30 23:44:21.378 +01:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-30 23:44:21.378 +01:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-30 23:44:21.378 +01:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-30 23:44:21.378 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-08-30 23:44:21.378 +01:00 [DBG] Closing connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.378 +01:00 [DBG] Closed connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB' (0ms).
+2024-08-30 23:44:21.379 +01:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2024-08-30 23:44:21.379 +01:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2024-08-30 23:44:21.379 +01:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2024-08-30 23:44:21.379 +01:00 [DBG] Opening connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.379 +01:00 [DBG] Opened connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.380 +01:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-30 23:44:21.386 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-08-30 23:44:21.386 +01:00 [DBG] Closing connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.386 +01:00 [DBG] Closed connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB' (0ms).
+2024-08-30 23:44:21.387 +01:00 [DBG] Opening connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.387 +01:00 [DBG] Opened connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.387 +01:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-30 23:44:21.387 +01:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-30 23:44:21.387 +01:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-30 23:44:21.387 +01:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-08-30 23:44:21.390 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-08-30 23:44:21.391 +01:00 [DBG] Closing data reader to 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.391 +01:00 [DBG] A data reader for 'VillaMon' on server '(localdb)\MSSQLLocalDB' is being disposed after spending 0ms reading results.
+2024-08-30 23:44:21.391 +01:00 [DBG] Closing connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.391 +01:00 [DBG] Closed connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB' (0ms).
+2024-08-30 23:44:21.397 +01:00 [INF] Applying migration '20240830224235_AddVillaTable'.
+2024-08-30 23:44:21.403 +01:00 [DBG] Opening connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.403 +01:00 [DBG] Opened connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.404 +01:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2024-08-30 23:44:21.407 +01:00 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2024-08-30 23:44:21.408 +01:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-08-30 23:44:21.408 +01:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-30 23:44:21.408 +01:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-30 23:44:21.408 +01:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Villas] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Details] nvarchar(max) NOT NULL,
+    [Rate] float NOT NULL,
+    [Sqft] int NOT NULL,
+    [Occupancy] int NOT NULL,
+    [ImageUrl] nvarchar(max) NOT NULL,
+    [Amenity] nvarchar(max) NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    [UpdatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Villas] PRIMARY KEY ([Id])
+);
+2024-08-30 23:44:21.411 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Villas] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Details] nvarchar(max) NOT NULL,
+    [Rate] float NOT NULL,
+    [Sqft] int NOT NULL,
+    [Occupancy] int NOT NULL,
+    [ImageUrl] nvarchar(max) NOT NULL,
+    [Amenity] nvarchar(max) NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    [UpdatedDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Villas] PRIMARY KEY ([Id])
+);
+2024-08-30 23:44:21.430 +01:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-08-30 23:44:21.430 +01:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-30 23:44:21.430 +01:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2024-08-30 23:44:21.430 +01:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240830224235_AddVillaTable', N'8.0.8');
+2024-08-30 23:44:21.433 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240830224235_AddVillaTable', N'8.0.8');
+2024-08-30 23:44:21.433 +01:00 [DBG] Committing transaction.
+2024-08-30 23:44:21.435 +01:00 [DBG] Committed transaction.
+2024-08-30 23:44:21.435 +01:00 [DBG] Disposing transaction.
+2024-08-30 23:44:21.435 +01:00 [DBG] Closing connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.436 +01:00 [DBG] Closed connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB' (0ms).
+2024-08-30 23:44:21.436 +01:00 [DBG] 'ApplicationDbContext' disposed.
+2024-08-30 23:44:21.437 +01:00 [DBG] Disposing connection to database 'VillaMon' on server '(localdb)\MSSQLLocalDB'.
+2024-08-30 23:44:21.437 +01:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-08-30 23:47:59.418 +01:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-08-30 23:47:59.664 +01:00 [DBG] Entity Framework Core 8.0.8 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.8' with options: None
+2024-08-30 23:47:59.951 +01:00 [DBG] 'ApplicationDbContext' disposed.

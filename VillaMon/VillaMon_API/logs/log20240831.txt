@@ -1,0 +1,268 @@
+2024-08-31 00:04:57.987 +01:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-31 00:04:58.094 +01:00 [DBG] Hosting starting
+2024-08-31 00:04:58.512 +01:00 [INF] Now listening on: https://localhost:7136
+2024-08-31 00:04:58.513 +01:00 [INF] Now listening on: http://localhost:5261
+2024-08-31 00:04:58.514 +01:00 [DBG] Loaded hosting startup assembly VillaMon_API
+2024-08-31 00:04:58.514 +01:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2024-08-31 00:04:58.515 +01:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-31 00:04:58.516 +01:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-31 00:04:58.544 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-31 00:04:58.544 +01:00 [INF] Hosting environment: Development
+2024-08-31 00:04:58.545 +01:00 [INF] Content root path: C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API
+2024-08-31 00:04:58.546 +01:00 [DBG] Hosting started
+2024-08-31 00:04:58.827 +01:00 [DBG] Connection id "0HN6990LRLUBA" received FIN.
+2024-08-31 00:04:58.830 +01:00 [DBG] Connection id "0HN6990LRLUBA" accepted.
+2024-08-31 00:04:58.831 +01:00 [DBG] Connection id "0HN6990LRLUBA" started.
+2024-08-31 00:04:58.844 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-31 00:04:58.934 +01:00 [DBG] Connection id "0HN6990LRLUBA" stopped.
+2024-08-31 00:04:58.937 +01:00 [DBG] Connection id "0HN6990LRLUBA" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-31 00:05:00.758 +01:00 [DBG] Connection id "0HN6990LRLUBB" accepted.
+2024-08-31 00:05:00.759 +01:00 [DBG] Connection id "0HN6990LRLUBB" started.
+2024-08-31 00:05:00.792 +01:00 [DBG] Connection 0HN6990LRLUBB established using the following protocol: "Tls13"
+2024-08-31 00:05:00.884 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/swagger/index.html - null null
+2024-08-31 00:05:01.051 +01:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-31 00:05:01.063 +01:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-08-31 00:05:01.065 +01:00 [DBG] Request did not match any endpoints
+2024-08-31 00:05:01.097 +01:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-31 00:05:01.100 +01:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-31 00:05:01.116 +01:00 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-31 00:05:01.117 +01:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-31 00:05:01.119 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/swagger/index.html - 200 null text/html;charset=utf-8 237.9108ms
+2024-08-31 00:05:01.122 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-31 00:05:01.122 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/_vs/browserLink - null null
+2024-08-31 00:05:01.128 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 6.3903ms
+2024-08-31 00:05:01.164 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.6348ms
+2024-08-31 00:05:01.245 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/swagger/v1/swagger.json - null null
+2024-08-31 00:05:01.249 +01:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-08-31 00:05:01.250 +01:00 [DBG] Request did not match any endpoints
+2024-08-31 00:05:01.332 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 87.0795ms
+2024-08-31 00:05:03.106 +01:00 [DBG] Connection id "0HN6990LRLUBB" received FIN.
+2024-08-31 00:05:03.108 +01:00 [DBG] The connection queue processing loop for 0HN6990LRLUBB completed.
+2024-08-31 00:05:03.110 +01:00 [DBG] Connection id "0HN6990LRLUBB" is closed. The last processed stream ID was 7.
+2024-08-31 00:05:03.111 +01:00 [DBG] Connection id "0HN6990LRLUBB" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-31 00:05:03.122 +01:00 [DBG] Connection id "0HN6990LRLUBB" stopped.
+2024-08-31 00:05:04.331 +01:00 [DBG] Connection id "0HN6990LRLUBC" accepted.
+2024-08-31 00:05:04.332 +01:00 [DBG] Connection id "0HN6990LRLUBC" started.
+2024-08-31 00:05:04.336 +01:00 [DBG] Connection 0HN6990LRLUBC established using the following protocol: "Tls13"
+2024-08-31 00:05:04.339 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/api/VillaAPI - null null
+2024-08-31 00:05:04.344 +01:00 [DBG] 1 candidate(s) found for the request path '/api/VillaAPI'
+2024-08-31 00:05:04.347 +01:00 [DBG] Endpoint 'VillaMon_API.Controllers.VillaAPIController.GetVillas (VillaMon_API)' with route pattern 'api/VillaAPI' is valid for the request path '/api/VillaAPI'
+2024-08-31 00:05:04.349 +01:00 [DBG] Request matched endpoint 'VillaMon_API.Controllers.VillaAPIController.GetVillas (VillaMon_API)'
+2024-08-31 00:05:04.352 +01:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-31 00:05:04.356 +01:00 [INF] Executing endpoint 'VillaMon_API.Controllers.VillaAPIController.GetVillas (VillaMon_API)'
+2024-08-31 00:05:04.363 +01:00 [INF] Executed endpoint 'VillaMon_API.Controllers.VillaAPIController.GetVillas (VillaMon_API)'
+2024-08-31 00:05:04.365 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'VillaMon_API.Controllers.VillaAPIController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-31 00:05:04.373 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/api/VillaAPI - 500 null text/plain; charset=utf-8 34.64ms
+2024-08-31 00:05:29.294 +01:00 [DBG] Connection id "0HN6990LRLUBC" received FIN.
+2024-08-31 00:05:29.295 +01:00 [DBG] Connection id "0HN6990LRLUBC" is closed. The last processed stream ID was 1.
+2024-08-31 00:05:29.295 +01:00 [DBG] The connection queue processing loop for 0HN6990LRLUBC completed.
+2024-08-31 00:05:29.297 +01:00 [DBG] Connection id "0HN6990LRLUBC" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-31 00:05:29.300 +01:00 [DBG] Connection id "0HN6990LRLUBC" stopped.
+2024-08-31 00:05:57.913 +01:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-31 00:05:57.984 +01:00 [DBG] Hosting starting
+2024-08-31 00:05:58.101 +01:00 [INF] Now listening on: https://localhost:7136
+2024-08-31 00:05:58.102 +01:00 [INF] Now listening on: http://localhost:5261
+2024-08-31 00:05:58.102 +01:00 [DBG] Loaded hosting startup assembly VillaMon_API
+2024-08-31 00:05:58.103 +01:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2024-08-31 00:05:58.104 +01:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-31 00:05:58.105 +01:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-31 00:05:58.138 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-31 00:05:58.140 +01:00 [INF] Hosting environment: Development
+2024-08-31 00:05:58.140 +01:00 [INF] Content root path: C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API
+2024-08-31 00:05:58.141 +01:00 [DBG] Hosting started
+2024-08-31 00:05:58.282 +01:00 [DBG] Connection id "0HN69917IM618" received FIN.
+2024-08-31 00:05:58.286 +01:00 [DBG] Connection id "0HN69917IM618" accepted.
+2024-08-31 00:05:58.287 +01:00 [DBG] Connection id "0HN69917IM618" started.
+2024-08-31 00:05:58.299 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-31 00:05:58.318 +01:00 [DBG] Connection id "0HN69917IM618" stopped.
+2024-08-31 00:05:58.321 +01:00 [DBG] Connection id "0HN69917IM618" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-31 00:05:58.431 +01:00 [DBG] Connection id "0HN69917IM619" accepted.
+2024-08-31 00:05:58.436 +01:00 [DBG] Connection id "0HN69917IM619" started.
+2024-08-31 00:05:58.511 +01:00 [DBG] Connection 0HN69917IM619 established using the following protocol: "Tls13"
+2024-08-31 00:05:58.566 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/swagger/index.html - null null
+2024-08-31 00:05:58.666 +01:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-31 00:05:58.683 +01:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-08-31 00:05:58.685 +01:00 [DBG] Request did not match any endpoints
+2024-08-31 00:05:58.717 +01:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-31 00:05:58.718 +01:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-31 00:05:58.731 +01:00 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-31 00:05:58.732 +01:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-31 00:05:58.735 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/swagger/index.html - 200 null text/html;charset=utf-8 173.8458ms
+2024-08-31 00:05:58.743 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-31 00:05:58.743 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/_vs/browserLink - null null
+2024-08-31 00:05:58.758 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 15.4635ms
+2024-08-31 00:05:58.784 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.8336ms
+2024-08-31 00:05:58.876 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/swagger/v1/swagger.json - null null
+2024-08-31 00:05:58.878 +01:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-08-31 00:05:58.879 +01:00 [DBG] Request did not match any endpoints
+2024-08-31 00:05:58.943 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 67.9778ms
+2024-08-31 00:07:07.616 +01:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-31 00:07:07.696 +01:00 [DBG] Hosting starting
+2024-08-31 00:07:07.824 +01:00 [INF] Now listening on: https://localhost:7136
+2024-08-31 00:07:07.825 +01:00 [INF] Now listening on: http://localhost:5261
+2024-08-31 00:07:07.825 +01:00 [DBG] Loaded hosting startup assembly VillaMon_API
+2024-08-31 00:07:07.826 +01:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2024-08-31 00:07:07.826 +01:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-31 00:07:07.827 +01:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-31 00:07:07.857 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-31 00:07:07.858 +01:00 [INF] Hosting environment: Development
+2024-08-31 00:07:07.859 +01:00 [INF] Content root path: C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API
+2024-08-31 00:07:07.860 +01:00 [DBG] Hosting started
+2024-08-31 00:07:08.007 +01:00 [DBG] Connection id "0HN6991SBKJ5B" accepted.
+2024-08-31 00:07:08.018 +01:00 [DBG] Connection id "0HN6991SBKJ5C" received FIN.
+2024-08-31 00:07:08.025 +01:00 [DBG] Connection id "0HN6991SBKJ5B" started.
+2024-08-31 00:07:08.018 +01:00 [DBG] Connection id "0HN6991SBKJ5B" received FIN.
+2024-08-31 00:07:08.025 +01:00 [DBG] Connection id "0HN6991SBKJ5C" accepted.
+2024-08-31 00:07:08.027 +01:00 [DBG] Connection id "0HN6991SBKJ5C" started.
+2024-08-31 00:07:08.055 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-31 00:07:08.055 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-31 00:07:08.075 +01:00 [DBG] Connection id "0HN6991SBKJ5C" stopped.
+2024-08-31 00:07:08.075 +01:00 [DBG] Connection id "0HN6991SBKJ5B" stopped.
+2024-08-31 00:07:08.078 +01:00 [DBG] Connection id "0HN6991SBKJ5B" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-31 00:07:08.078 +01:00 [DBG] Connection id "0HN6991SBKJ5C" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-31 00:07:08.164 +01:00 [DBG] Connection id "0HN6991SBKJ5D" accepted.
+2024-08-31 00:07:08.165 +01:00 [DBG] Connection id "0HN6991SBKJ5D" started.
+2024-08-31 00:07:08.218 +01:00 [DBG] Connection 0HN6991SBKJ5D established using the following protocol: "Tls13"
+2024-08-31 00:07:08.255 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/swagger/index.html - null null
+2024-08-31 00:07:08.323 +01:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-31 00:07:08.335 +01:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-08-31 00:07:08.336 +01:00 [DBG] Request did not match any endpoints
+2024-08-31 00:07:08.368 +01:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-31 00:07:08.370 +01:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-31 00:07:08.383 +01:00 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-31 00:07:08.385 +01:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-31 00:07:08.390 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/swagger/index.html - 200 null text/html;charset=utf-8 136.7123ms
+2024-08-31 00:07:08.392 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/_vs/browserLink - null null
+2024-08-31 00:07:08.392 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-31 00:07:08.404 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 12.3424ms
+2024-08-31 00:07:08.423 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.0091ms
+2024-08-31 00:07:08.443 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/swagger/v1/swagger.json - null null
+2024-08-31 00:07:08.445 +01:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-08-31 00:07:08.446 +01:00 [DBG] Request did not match any endpoints
+2024-08-31 00:07:08.502 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 59.8933ms
+2024-08-31 00:07:11.108 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/api/VillaAPI - null null
+2024-08-31 00:07:11.112 +01:00 [DBG] 1 candidate(s) found for the request path '/api/VillaAPI'
+2024-08-31 00:07:11.115 +01:00 [DBG] Endpoint 'VillaMon_API.Controllers.VillaAPIController.GetVillas (VillaMon_API)' with route pattern 'api/VillaAPI' is valid for the request path '/api/VillaAPI'
+2024-08-31 00:07:11.117 +01:00 [DBG] Request matched endpoint 'VillaMon_API.Controllers.VillaAPIController.GetVillas (VillaMon_API)'
+2024-08-31 00:07:11.119 +01:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-31 00:07:11.121 +01:00 [INF] Executing endpoint 'VillaMon_API.Controllers.VillaAPIController.GetVillas (VillaMon_API)'
+2024-08-31 00:07:11.125 +01:00 [INF] Executed endpoint 'VillaMon_API.Controllers.VillaAPIController.GetVillas (VillaMon_API)'
+2024-08-31 00:07:11.127 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'VillaMon_API.Controllers.VillaAPIController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-31 00:07:11.133 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/api/VillaAPI - 500 null text/plain; charset=utf-8 25.8522ms
+2024-08-31 00:10:01.676 +01:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-31 00:10:01.748 +01:00 [DBG] Hosting starting
+2024-08-31 00:10:01.866 +01:00 [INF] Now listening on: https://localhost:7136
+2024-08-31 00:10:01.866 +01:00 [INF] Now listening on: http://localhost:5261
+2024-08-31 00:10:01.867 +01:00 [DBG] Loaded hosting startup assembly VillaMon_API
+2024-08-31 00:10:01.868 +01:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2024-08-31 00:10:01.868 +01:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-31 00:10:01.869 +01:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-31 00:10:01.896 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-31 00:10:01.898 +01:00 [INF] Hosting environment: Development
+2024-08-31 00:10:01.898 +01:00 [INF] Content root path: C:\Users\hkhat\OneDrive\Desktop\Project\SOA\VillaMon\VillaMon_API
+2024-08-31 00:10:01.899 +01:00 [DBG] Hosting started
+2024-08-31 00:10:02.069 +01:00 [DBG] Connection id "0HN6993G7K0QP" received FIN.
+2024-08-31 00:10:02.089 +01:00 [DBG] Connection id "0HN6993G7K0QP" accepted.
+2024-08-31 00:10:02.117 +01:00 [DBG] Connection id "0HN6993G7K0QP" started.
+2024-08-31 00:10:02.128 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-31 00:10:02.149 +01:00 [DBG] Connection id "0HN6993G7K0QP" stopped.
+2024-08-31 00:10:02.152 +01:00 [DBG] Connection id "0HN6993G7K0QP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-31 00:10:02.191 +01:00 [DBG] Connection id "0HN6993G7K0QQ" accepted.
+2024-08-31 00:10:02.193 +01:00 [DBG] Connection id "0HN6993G7K0QQ" started.
+2024-08-31 00:10:02.218 +01:00 [DBG] Connection 0HN6993G7K0QQ established using the following protocol: "Tls13"
+2024-08-31 00:10:02.255 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/swagger/index.html - null null
+2024-08-31 00:10:02.315 +01:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-31 00:10:02.325 +01:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-08-31 00:10:02.326 +01:00 [DBG] Request did not match any endpoints
+2024-08-31 00:10:02.358 +01:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-31 00:10:02.360 +01:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-31 00:10:02.372 +01:00 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-31 00:10:02.374 +01:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-31 00:10:02.377 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/swagger/index.html - 200 null text/html;charset=utf-8 124.7886ms
+2024-08-31 00:10:02.380 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-31 00:10:02.380 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/_vs/browserLink - null null
+2024-08-31 00:10:02.391 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 11.4614ms
+2024-08-31 00:10:02.417 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.004ms
+2024-08-31 00:10:02.439 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/swagger/v1/swagger.json - null null
+2024-08-31 00:10:02.442 +01:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-08-31 00:10:02.443 +01:00 [DBG] Request did not match any endpoints
+2024-08-31 00:10:02.495 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 56.4486ms
+2024-08-31 00:10:06.150 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7136/api/VillaAPI - null null
+2024-08-31 00:10:06.154 +01:00 [DBG] 1 candidate(s) found for the request path '/api/VillaAPI'
+2024-08-31 00:10:06.157 +01:00 [DBG] Endpoint 'VillaMon_API.Controllers.VillaAPIController.GetVillas (VillaMon_API)' with route pattern 'api/VillaAPI' is valid for the request path '/api/VillaAPI'
+2024-08-31 00:10:06.158 +01:00 [DBG] Request matched endpoint 'VillaMon_API.Controllers.VillaAPIController.GetVillas (VillaMon_API)'
+2024-08-31 00:10:06.161 +01:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-31 00:10:06.162 +01:00 [INF] Executing endpoint 'VillaMon_API.Controllers.VillaAPIController.GetVillas (VillaMon_API)'
+2024-08-31 00:10:06.166 +01:00 [INF] Executed endpoint 'VillaMon_API.Controllers.VillaAPIController.GetVillas (VillaMon_API)'
+2024-08-31 00:10:06.167 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'VillaMon_API.Controllers.VillaAPIController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-31 00:10:06.172 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7136/api/VillaAPI - 500 null text/plain; charset=utf-8 22.4444ms

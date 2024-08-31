@@ -1,0 +1,105 @@
+﻿@page "/villas"
+@using VillaMon_API.Models.Dto
+@inject HttpClient Http
+
+<h3>Villa Management</h3>
+
+<!-- Existing Villa List Table -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Rate</th>
+            <th>Occupancy</th>
+            <th>Location</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var villa in villas)
+        {
+            <tr>
+                <td>@villa.Name</td>
+                <td>@villa.Rate</td>
+                <td>@villa.Occupancy</td>
+                <td>@villa.Location</td>
+                <td>
+                    <button @onclick="@(() => DeleteVilla(villa.Id))" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- New Delete by ID Form -->
+<EditForm Model="@this" OnValidSubmit="DeleteVillaById" Name="DeleteVillaForm">
+    <div class="mt-3">
+        <label for="villaIdToDelete">Enter Villa ID to Delete:</label>
+        <input type="number" @bind="villaIdToDelete" id="villaIdToDelete" class="form-control" placeholder="Enter Villa ID" style="display: inline-block; width: auto; margin-right: 10px;" />
+        <button type="submit" class="btn btn-danger">Delete by ID</button>
+    </div>
+</EditForm>
+
+@code {
+    private List<VillaDTO> villas = new();
+    private VillaDTO newVilla = new VillaDTO();
+    private int villaIdToDelete; // Holds the ID of the villa to be deleted
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadVillas();
+    }
+
+    private async Task LoadVillas()
+    {
+        villas = await Http.GetFromJsonAsync<List<VillaDTO>>("VillaAPI");
+    }
+
+    private async Task CreateVilla()
+    {
+        var response = await Http.PostAsJsonAsync("VillaAPI", newVilla);
+        if (response.IsSuccessStatusCode)
+        {
+            newVilla = new VillaDTO();
+            await LoadVillas();
+        }
+        else
+        {
+            Console.WriteLine("Failed to add villa");
+        }
+    }
+
+    private async Task DeleteVilla(int id)
+    {
+        Console.WriteLine($"Attempting to delete villa with ID {id}.");
+
+        var response = await Http.DeleteAsync($"VillaAPI/{id}");
+
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine($"Villa with ID {id} deleted successfully.");
+            var villaToRemove = villas.FirstOrDefault(v => v.Id == id);
+            if (villaToRemove != null)
+            {
+                villas.Remove(villaToRemove);
+            }
+            StateHasChanged();
+        }
+        else
+        {
+            Console.WriteLine($"Failed to delete villa with ID {id}. Status Code: {response.StatusCode}");
+        }
+    }
+
+    private async Task DeleteVillaById()
+    {
+        if (villaIdToDelete > 0) // Ensure a valid ID is entered
+        {
+            await DeleteVilla(villaIdToDelete);
+        }
+        else
+        {
+            Console.WriteLine("Please enter a valid Villa ID.");
+        }
+    }
+}

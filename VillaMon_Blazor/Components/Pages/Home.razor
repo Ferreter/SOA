@@ -1,0 +1,132 @@
+﻿@page "/"
+@inject HttpClient Http
+@using VillaMon_API.Models.Dto
+
+<h3>Welcome to Villa Management</h3>
+
+<!-- Available Villas -->
+<h4>Available Villas</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Rate</th>
+            <th>Occupancy</th>
+            <th>Location</th>
+            <th>Amenities</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (availableVillas != null && availableVillas.Any())
+        {
+            @foreach (var villa in availableVillas)
+            {
+                <tr>
+                    <td>@villa.Name</td>
+                    <td>@villa.Rate</td>
+                    <td>@villa.Occupancy</td>
+                    <td>@villa.Location</td>
+                    <td>@villa.Amenity</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="5">No available villas found.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Payment Status of Bookings -->
+<h4>Payment Status Summary</h4>
+<ul>
+    <li>Paid: @paymentStatusSummary["Paid"]</li>
+    <li>Pending: @paymentStatusSummary["Pending"]</li>
+    <li>Cancelled: @paymentStatusSummary["Cancelled"]</li>
+</ul>
+
+<!-- Villas by Most Occupants -->
+<h4>Villas by Most Occupants (Top to Bottom)</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Rate</th>
+            <th>Occupancy</th>
+            <th>Location</th>
+            <th>Amenities</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (villasByOccupants != null && villasByOccupants.Any())
+        {
+            @foreach (var villa in villasByOccupants)
+            {
+                <tr>
+                    <td>@villa.Name</td>
+                    <td>@villa.Rate</td>
+                    <td>@villa.Occupancy</td>
+                    <td>@villa.Location</td>
+                    <td>@villa.Amenity</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="5">No villas found.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private List<VillaDTO> availableVillas;
+    private List<BookingDTO> currentBookings;
+    private List<VillaDTO> villasByOccupants;
+    private Dictionary<string, int> paymentStatusSummary = new Dictionary<string, int>
+    {
+        { "Paid", 0 },
+        { "Pending", 0 },
+        { "Cancelled", 0 }
+    };
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadAvailableVillas();
+        await LoadCurrentBookings();
+        CalculatePaymentStatusSummary();
+        SortVillasByOccupancy();
+    }
+
+    private async Task LoadAvailableVillas()
+    {
+        // Fetch all available villas
+        availableVillas = await Http.GetFromJsonAsync<List<VillaDTO>>("VillaAPI");
+
+        // Filter only available villas
+        availableVillas = availableVillas.Where(v => v.IsAvailable).ToList();
+    }
+
+    private async Task LoadCurrentBookings()
+    {
+        // Fetch all current bookings
+        currentBookings = await Http.GetFromJsonAsync<List<BookingDTO>>("BookingAPI");
+    }
+
+    private void CalculatePaymentStatusSummary()
+    {
+        // Calculate the payment status summary
+        paymentStatusSummary["Paid"] = currentBookings.Count(b => b.PaymentStatus == "Paid");
+        paymentStatusSummary["Pending"] = currentBookings.Count(b => b.PaymentStatus == "Pending");
+        paymentStatusSummary["Cancelled"] = currentBookings.Count(b => b.PaymentStatus == "Cancelled");
+    }
+
+    private void SortVillasByOccupancy()
+    {
+        // Sort villas by most occupants in descending order
+        villasByOccupants = availableVillas.OrderByDescending(v => v.Occupancy).ToList();
+    }
+}
