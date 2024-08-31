@@ -18,7 +18,6 @@ namespace VillaMon_API.Models
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
 
-        // New Fields
         public string Location { get; set; }  // Location of the villa
         public bool IsAvailable { get; set; }  // Availability status
     }

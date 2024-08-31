@@ -16,5 +16,7 @@ namespace VillaMon_API.Models.Dto
         public string ImageUrl { get; set; }
         public string Amenity { get; set; }
 
+        public string Location { get; set; }  // Location of the villa
+        public bool IsAvailable { get; set; }  // Availability status
     }
 }
