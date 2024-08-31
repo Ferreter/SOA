@@ -28,7 +28,6 @@ namespace VillaMon_API.Tests.Controllers
             return Ok(_villas);
         }
 
-        // GET: api/TestBookingAPI/Bookings
         [HttpGet("Bookings")]
         public ActionResult<IEnumerable<BookingDTO>> GetAllBookings()
         {

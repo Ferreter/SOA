@@ -16,7 +16,6 @@ namespace VillaMon_API.Tests
             // Initialize the test controller
             _controller = new TestBookingAPIController();
         }
-
         [Fact]
         public void GetAllVillas_ShouldReturnAllVillas()
         {
@@ -24,10 +23,12 @@ namespace VillaMon_API.Tests
             var result = _controller.GetAllVillas();
 
             // Assert
-            var okResult = Assert.IsType<OkObjectResult>(result);
+            var okResult = Assert.IsType<OkObjectResult>(result.Result); // Access the Result property
             var villas = Assert.IsType<List<VillaDTO>>(okResult.Value);
             Assert.Equal(3, villas.Count); // Should match the number of villas in LocalStorage
         }
+
+
 
         [Fact]
         public void GetAllBookings_ShouldReturnAllBookings()
@@ -36,11 +37,10 @@ namespace VillaMon_API.Tests
             var result = _controller.GetAllBookings();
 
             // Assert
-            var okResult = Assert.IsType<OkObjectResult>(result);
+            var okResult = Assert.IsType<OkObjectResult>(result.Result); // Access the Result property
             var bookings = Assert.IsType<List<BookingDTO>>(okResult.Value);
             Assert.Equal(2, bookings.Count); // Should match the number of bookings in LocalStorage
         }
-
         [Fact]
         public void GetBookingById_ExistingId_ShouldReturnCorrectBooking()
         {
