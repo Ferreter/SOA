@@ -8,6 +8,7 @@ using VillaMon_API.Data;
 using VillaMon_API.Models;
 using VillaMon_API.Models.Dto;
 using VillaMon_API.Controllers;
+using Microsoft.EntityFrameworkCore;
 
 [TestFixture]
 public class VillaAPIControllerTests
@@ -18,23 +19,43 @@ public class VillaAPIControllerTests
     [SetUp]
     public void Setup()
     {
-        _dbMock = new Mock<ApplicationDbContext>();
-        _controller = new VillaAPIController(_dbMock.Object);
+        var villaDbSetMock = new Mock<DbSet<Villa>>();
+        // Set up DbSet mock behavior if needed
+
+        var dbContextMock = new Mock<ApplicationDbContext>();
+        dbContextMock.Setup(c => c.Villas).Returns(villaDbSetMock.Object);
+
+        _controller = new VillaAPIController(dbContextMock.Object);
     }
+
+
 
     [Test]
     public void GetVillas_ReturnsAllVillas()
     {
         // Arrange
         var villas = new List<VillaDTO>
-        {
-            new VillaDTO { Id = 1, Name = "Luxury Villa" },
-            new VillaDTO { Id = 2, Name = "Beachfront Villa" }
-        };
-        _dbMock.Setup(db => db.Villas).Returns((Microsoft.EntityFrameworkCore.DbSet<Villa>)villas.AsQueryable());
+    {
+        new VillaDTO { Id = 1, Name = "Luxury Villa" },
+        new VillaDTO { Id = 2, Name = "Beachfront Villa" }
+    };
+
+        // Create a mock DbSet<Villa>
+        var villaDbSetMock = new Mock<DbSet<Villa>>();
+        villaDbSetMock.As<IQueryable<Villa>>().Setup(m => m.Provider).Returns(villas.AsQueryable().Provider);
+        villaDbSetMock.As<IQueryable<Villa>>().Setup(m => m.Expression).Returns(villas.AsQueryable().Expression);
+        villaDbSetMock.As<IQueryable<Villa>>().Setup(m => m.ElementType).Returns(villas.AsQueryable().ElementType);
+        villaDbSetMock.As<IQueryable<Villa>>().Setup(m => m.GetEnumerator()).Returns((IEnumerator<Villa>)villas.AsQueryable().GetEnumerator());
+
+        // Mock the ApplicationDbContext to return the mock DbSet
+        var dbContextMock = new Mock<ApplicationDbContext>();
+        dbContextMock.Setup(db => db.Villas).Returns(villaDbSetMock.Object);
+
+        // Use your controller with the mocked context
+        var controller = new VillaAPIController(dbContextMock.Object);
 
         // Act
-        var result = _controller.GetVillas();
+        var result = controller.GetVillas();
 
         // Assert
         Assert.That(result, Is.InstanceOf<ActionResult<IEnumerable<VillaDTO>>>());
