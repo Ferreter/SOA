@@ -39,50 +39,16 @@
     </tbody>
 </table>
 
-<!-- Current Bookings -->
-<h4>Current Bookings</h4>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Guest Name</th>
-            <th>Check-In Date</th>
-            <th>Check-Out Date</th>
-            <th>Villa ID</th>
-            <th>Guest Count</th>
-            <th>Payment Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (currentBookings != null && currentBookings.Any())
-        {
-            @foreach (var booking in currentBookings)
-            {
-                <tr>
-                    <td>@booking.GuestName</td>
-                    <td>@booking.CheckInDate.ToShortDateString()</td>
-                    <td>@booking.CheckOutDate.ToShortDateString()</td>
-                    <td>@booking.VillaId</td>
-                    <td>@booking.GuestCount</td>
-                    <td>@booking.PaymentStatus</td>
-                </tr>
-            }
-        }
-        else
-        {
-            <tr>
-                <td colspan="6">No current bookings found.</td>
-            </tr>
-        }
-    </tbody>
-</table>
+<!-- Payment Status of Bookings -->
+<h4>Payment Status Summary</h4>
+<ul>
+    <li>Paid: @paymentStatusSummary["Paid"]</li>
+    <li>Pending: @paymentStatusSummary["Pending"]</li>
+    <li>Cancelled: @paymentStatusSummary["Cancelled"]</li>
+</ul>
 
-<!-- Villas by Occupancy -->
-<h4>Villas by Occupancy</h4>
-<div class="form-group">
-    <label for="occupancyFilter">Filter by Occupancy:</label>
-    <input type="number" @bind="occupancyFilter" id="occupancyFilter" class="form-control" placeholder="Enter occupancy number" />
-    <button @onclick="FilterVillasByOccupancy" class="btn btn-primary mt-2">Filter</button>
-</div>
+<!-- Villas by Most Occupants -->
+<h4>Villas by Most Occupants (Top to Bottom)</h4>
 <table class="table">
     <thead>
         <tr>
@@ -94,9 +60,9 @@
         </tr>
     </thead>
     <tbody>
-        @if (filteredVillas != null && filteredVillas.Any())
+        @if (villasByOccupants != null && villasByOccupants.Any())
         {
-            @foreach (var villa in filteredVillas)
+            @foreach (var villa in villasByOccupants)
             {
                 <tr>
                     <td>@villa.Name</td>
@@ -110,7 +76,7 @@
         else
         {
             <tr>
-                <td colspan="5">No villas found for the selected occupancy.</td>
+                <td colspan="5">No villas found.</td>
             </tr>
         }
     </tbody>
@@ -119,13 +85,20 @@
 @code {
     private List<VillaDTO> availableVillas;
     private List<BookingDTO> currentBookings;
-    private List<VillaDTO> filteredVillas;
-    private int occupancyFilter = 1; // Default filter value
+    private List<VillaDTO> villasByOccupants;
+    private Dictionary<string, int> paymentStatusSummary = new Dictionary<string, int>
+    {
+        { "Paid", 0 },
+        { "Pending", 0 },
+        { "Cancelled", 0 }
+    };
 
     protected override async Task OnInitializedAsync()
     {
         await LoadAvailableVillas();
         await LoadCurrentBookings();
+        CalculatePaymentStatusSummary();
+        SortVillasByOccupancy();
     }
 
     private async Task LoadAvailableVillas()
@@ -143,9 +116,17 @@
         currentBookings = await Http.GetFromJsonAsync<List<BookingDTO>>("BookingAPI");
     }
 
-    private void FilterVillasByOccupancy()
+    private void CalculatePaymentStatusSummary()
     {
-        // Filter villas by occupancy
-        filteredVillas = availableVillas.Where(v => v.Occupancy >= occupancyFilter).ToList();
+        // Calculate the payment status summary
+        paymentStatusSummary["Paid"] = currentBookings.Count(b => b.PaymentStatus == "Paid");
+        paymentStatusSummary["Pending"] = currentBookings.Count(b => b.PaymentStatus == "Pending");
+        paymentStatusSummary["Cancelled"] = currentBookings.Count(b => b.PaymentStatus == "Cancelled");
+    }
+
+    private void SortVillasByOccupancy()
+    {
+        // Sort villas by most occupants in descending order
+        villasByOccupants = availableVillas.OrderByDescending(v => v.Occupancy).ToList();
     }
 }
