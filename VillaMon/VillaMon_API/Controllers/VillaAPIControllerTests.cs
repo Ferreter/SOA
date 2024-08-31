@@ -8,48 +8,85 @@ using VillaMon_API.Data;
 using VillaMon_API.Models;
 using VillaMon_API.Models.Dto;
 using VillaMon_API.Controllers;
-using Microsoft.EntityFrameworkCore;
 
 [TestFixture]
 public class VillaAPIControllerTests
 {
     private Mock<ApplicationDbContext> _dbMock;
     private VillaAPIController _controller;
-    private Mock<DbSet<Villa>> _villaDbSetMock;
 
     [SetUp]
     public void Setup()
     {
         _dbMock = new Mock<ApplicationDbContext>();
-        _villaDbSetMock = new Mock<DbSet<Villa>>();
         _controller = new VillaAPIController(_dbMock.Object);
     }
 
     [Test]
-    public void GetVillas_ReturnsListOfVillas()
+    public void GetVillas_ReturnsAllVillas()
     {
         // Arrange
-        var villas = new List<Villa>
+        var villas = new List<VillaDTO>
         {
-            new Villa { Id = 1, Name = "Villa 1", Rate = 100.0 },
-            new Villa { Id = 2, Name = "Villa 2", Rate = 200.0 }
-        }.AsQueryable();
-
-        _villaDbSetMock.As<IQueryable<Villa>>().Setup(m => m.Provider).Returns(villas.Provider);
-        _villaDbSetMock.As<IQueryable<Villa>>().Setup(m => m.Expression).Returns(villas.Expression);
-        _villaDbSetMock.As<IQueryable<Villa>>().Setup(m => m.ElementType).Returns(villas.ElementType);
-        _villaDbSetMock.As<IQueryable<Villa>>().Setup(m => m.GetEnumerator()).Returns(villas.GetEnumerator());
-
-        _dbMock.Setup(db => db.Villas).Returns(_villaDbSetMock.Object);
+            new VillaDTO { Id = 1, Name = "Luxury Villa" },
+            new VillaDTO { Id = 2, Name = "Beachfront Villa" }
+        };
+        _dbMock.Setup(db => db.Villas).Returns((Microsoft.EntityFrameworkCore.DbSet<Villa>)villas.AsQueryable());
 
         // Act
         var result = _controller.GetVillas();
 
         // Assert
-        Assert.That(result.Value, Is.InstanceOf<IEnumerable<VillaDTO>>());
-        var villaDTOs = result.Value as IEnumerable<VillaDTO>;
-        Assert.That(villaDTOs?.Count(), Is.EqualTo(villas.Count()));
+        Assert.That(result, Is.InstanceOf<ActionResult<IEnumerable<VillaDTO>>>());
+        var okResult = result.Result as OkObjectResult;
+        Assert.That(okResult, Is.Not.Null);
+        var returnedVillas = okResult?.Value as List<VillaDTO>;
+        Assert.That(returnedVillas?.Count, Is.EqualTo(2));
     }
 
-    // Other tests remain unchanged
+    [Test]
+    public void GetVillas_ReturnsNotFoundWhenEmpty()
+    {
+        // Arrange
+        _dbMock.Setup(db => db.Villas).Returns((Microsoft.EntityFrameworkCore.DbSet<Villa>)new List<VillaDTO>().AsQueryable());
+
+        // Act
+        var result = _controller.GetVillas();
+
+        // Assert
+        Assert.That(result, Is.InstanceOf<ActionResult<IEnumerable<VillaDTO>>>());
+        Assert.That(result.Result, Is.InstanceOf<NotFoundResult>());
+    }
+
+    [Test]
+    public void GetVilla_ValidId_ReturnsVilla()
+    {
+        // Arrange
+        var villa = new VillaDTO { Id = 1, Name = "Luxury Villa" };
+        _dbMock.Setup(db => db.Villas).Returns((Microsoft.EntityFrameworkCore.DbSet<Villa>)new List<VillaDTO> { villa }.AsQueryable());
+
+        // Act
+        var result = _controller.GetVilla(1);
+
+        // Assert
+        Assert.That(result, Is.InstanceOf<ActionResult<VillaDTO>>());
+        var okResult = result.Result as OkObjectResult;
+        Assert.That(okResult, Is.Not.Null);
+        var returnedVilla = okResult?.Value as VillaDTO;
+        Assert.That(returnedVilla?.Name, Is.EqualTo("Luxury Villa"));
+    }
+
+    [Test]
+    public void GetVilla_InvalidId_ReturnsNotFound()
+    {
+        // Arrange
+        _dbMock.Setup(db => db.Villas).Returns((Microsoft.EntityFrameworkCore.DbSet<Villa>)new List<VillaDTO>().AsQueryable());
+
+        // Act
+        var result = _controller.GetVilla(99);
+
+        // Assert
+        Assert.That(result, Is.InstanceOf<ActionResult<VillaDTO>>());
+        Assert.That(result.Result, Is.InstanceOf<NotFoundResult>());
+    }
 }

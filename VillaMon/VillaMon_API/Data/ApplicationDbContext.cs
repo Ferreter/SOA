@@ -11,6 +11,8 @@ namespace VillaMon_API.Data
         }
 
         public DbSet<Villa> Villas { get; set; }
+        public DbSet<Booking> Bookings { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
