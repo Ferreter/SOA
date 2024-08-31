@@ -40,6 +40,20 @@ namespace VillaMon_API.Controllers
             }
             return Ok(booking);
         }
+        // GET: api/BookingAPI/ByVilla/{villaId}
+        [HttpGet("ByVilla/{villaId:int}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(404)]
+        public ActionResult<IEnumerable<BookingDTO>> GetBookingsByVillaId(int villaId)
+        {
+            var bookings = _db.Bookings.Where(b => b.VillaId == villaId).ToList();
+            if (bookings == null || !bookings.Any())
+            {
+                return NotFound($"No bookings found for Villa with ID {villaId}");
+            }
+            return Ok(bookings);
+        }
+
 
         // POST: api/BookingAPI
         [HttpPost]
