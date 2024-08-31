@@ -1,0 +1,83 @@
+﻿@page "/villas"
+@inject HttpClient Http
+
+<h3>Villa Management</h3>
+
+<!-- Villa Form -->
+<EditForm Model="@newVilla" OnValidSubmit="@CreateVilla">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputText @bind-Value="newVilla.Name" placeholder="Name" />
+    <InputTextArea @bind-Value="newVilla.Details" placeholder="Details" />
+    <InputNumber @bind-Value="newVilla.Rate" placeholder="Rate" />
+    <InputNumber @bind-Value="newVilla.Sqft" placeholder="Square Feet" />
+    <InputNumber @bind-Value="newVilla.Occupancy" placeholder="Occupancy" />
+    <InputText @bind-Value="newVilla.ImageUrl" placeholder="Image URL" />
+    <InputText @bind-Value="newVilla.Amenity" placeholder="Amenity" />
+    <InputText @bind-Value="newVilla.Location" placeholder="Location" />
+    <InputCheckbox @bind-Value="newVilla.IsAvailable" />
+
+    <button type="submit">Add Villa</button>
+</EditForm>
+
+<!-- Villa List -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Rate</th>
+            <th>Occupancy</th>
+            <th>Location</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var villa in villas)
+        {
+            <tr>
+                <td>@villa.Name</td>
+                <td>@villa.Rate</td>
+                <td>@villa.Occupancy</td>
+                <td>@villa.Location</td>
+                <td>
+                    <button @onclick="() => EditVilla(villa)">Edit</button>
+                    <button @onclick="() => DeleteVilla(villa.Id)">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private List<VillaDTO> villas = new();
+    private VillaDTO newVilla = new VillaDTO();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadVillas();
+    }
+
+    private async Task LoadVillas()
+    {
+        villas = await Http.GetFromJsonAsync<List<VillaDTO>>("VillaAPI");
+    }
+
+    private async Task CreateVilla()
+    {
+        await Http.PostAsJsonAsync("VillaAPI", newVilla);
+        newVilla = new VillaDTO();
+        await LoadVillas();
+    }
+
+    private async Task EditVilla(VillaDTO villa)
+    {
+        // Logic to edit villa (could open a modal or redirect to another page)
+    }
+
+    private async Task DeleteVilla(int id)
+    {
+        await Http.DeleteAsync($"VillaAPI/{id}");
+        await LoadVillas();
+    }
+}

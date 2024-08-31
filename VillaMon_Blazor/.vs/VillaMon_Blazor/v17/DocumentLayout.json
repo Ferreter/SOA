@@ -1,0 +1,189 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|c:\\users\\hkhat\\onedrive\\desktop\\project\\soa\\villamon_blazor\\components\\pages\\villas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|solutionrelative:components\\pages\\villas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|c:\\users\\hkhat\\onedrive\\desktop\\project\\soa\\villamon_blazor\\components\\pages\\bookings.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|solutionrelative:components\\pages\\bookings.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|c:\\users\\hkhat\\onedrive\\desktop\\project\\soa\\villamon_blazor\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|solutionrelative:components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|c:\\users\\hkhat\\onedrive\\desktop\\project\\soa\\villamon_blazor\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|c:\\users\\hkhat\\onedrive\\desktop\\project\\soa\\villamon_blazor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|c:\\users\\hkhat\\onedrive\\desktop\\project\\soa\\villamon_blazor\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|c:\\users\\hkhat\\onedrive\\desktop\\project\\soa\\villamon_blazor\\components\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|solutionrelative:components\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|c:\\users\\hkhat\\onedrive\\desktop\\project\\soa\\villamon_blazor\\villamon_blazor.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|solutionrelative:villamon_blazor.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\.filenesting.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.filenesting.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|c:\\users\\hkhat\\onedrive\\desktop\\project\\soa\\villamon_blazor\\villamon_blazor.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{7AB0F966-D364-4CA0-ACFC-7A8BF27B792E}|VillaMon_Blazor.csproj|solutionrelative:villamon_blazor.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-31T10:28:08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": ".filenesting.json",
+              "DocumentMoniker": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\.filenesting.json",
+              "RelativeDocumentMoniker": ".filenesting.json",
+              "ToolTip": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\.filenesting.json",
+              "RelativeToolTip": ".filenesting.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-31T10:20:18.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-31T10:15:15.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Counter.razor",
+              "DocumentMoniker": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\Components\\Pages\\Counter.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Counter.razor",
+              "ToolTip": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\Components\\Pages\\Counter.razor",
+              "RelativeToolTip": "Components\\Pages\\Counter.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-31T10:15:05.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VillaMon_Blazor",
+              "DocumentMoniker": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\VillaMon_Blazor.csproj",
+              "RelativeDocumentMoniker": "VillaMon_Blazor.csproj",
+              "ToolTip": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\VillaMon_Blazor.csproj",
+              "RelativeToolTip": "VillaMon_Blazor.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-31T10:00:59.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\Components\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Components\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\Components\\NavMenu.razor",
+              "RelativeToolTip": "Components\\NavMenu.razor",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-31T09:45:43.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Bookings.razor",
+              "DocumentMoniker": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\Components\\Pages\\Bookings.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Bookings.razor",
+              "ToolTip": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\Components\\Pages\\Bookings.razor",
+              "RelativeToolTip": "Components\\Pages\\Bookings.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-31T09:43:47.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Villas.razor",
+              "DocumentMoniker": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\Components\\Pages\\Villas.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Villas.razor",
+              "ToolTip": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\Components\\Pages\\Villas.razor",
+              "RelativeToolTip": "Components\\Pages\\Villas.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-31T09:43:28.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VillaMon_Blazor",
+              "DocumentMoniker": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\VillaMon_Blazor.csproj",
+              "RelativeDocumentMoniker": "VillaMon_Blazor.csproj",
+              "ToolTip": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\VillaMon_Blazor.csproj",
+              "RelativeToolTip": "VillaMon_Blazor.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-31T10:17:05.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\hkhat\\OneDrive\\Desktop\\Project\\SOA\\VillaMon_Blazor\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T09:42:10.9Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
