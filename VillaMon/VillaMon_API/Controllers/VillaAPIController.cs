@@ -89,7 +89,8 @@ namespace VillaMon_API.Controllers
                 ImageUrl = villaDto.ImageUrl,
                 Rate = villaDto.Rate,
                 Id = villaDto.Id,
-
+                Location = villaDto.Location,
+                IsAvailable = villaDto.IsAvailable
 
     
             };
@@ -128,49 +129,45 @@ namespace VillaMon_API.Controllers
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-
         public ActionResult<VillaDTO> UpdateVilla(int id, VillaDTO villaDto)
         {
-
+            // Check if the model state is valid
             if (!ModelState.IsValid)
             {
-
                 return BadRequest(ModelState);
             }
 
+            // Check if the ID matches the ID in the DTO
+            if (id != villaDto.Id)
+            {
+                return BadRequest("The ID in the URL does not match the ID in the DTO");
+            }
+
+            // Find the existing villa
             var existingVilla = _db.Villas.FirstOrDefault(v => v.Id == id);
             if (existingVilla == null)
             {
-
                 return NotFound();
             }
 
-            // Check if the updated name already exists
-            if (_db.Villas.Any(v => v.Name.ToLower() == villaDto.Name.ToLower() && v.Id != id))
-            {
+            // Update the existing villa's properties
+            existingVilla.Name = villaDto.Name;
+            existingVilla.Occupancy = villaDto.Occupancy;
+            existingVilla.Sqft = villaDto.Sqft;
+            existingVilla.Amenity = villaDto.Amenity;
+            existingVilla.Details = villaDto.Details;
+            existingVilla.ImageUrl = villaDto.ImageUrl;
+            existingVilla.Rate = villaDto.Rate;
+            existingVilla.Location = villaDto.Location;
+            existingVilla.IsAvailable = villaDto.IsAvailable;
 
-                return BadRequest("Villa name already exists");
-            }
-
-
-            Villa model = new()
-            {
-                Name = villaDto.Name,
-                Occupancy = villaDto.Occupancy,
-                Sqft = villaDto.Sqft,
-                Amenity = villaDto.Amenity,
-                Details = villaDto.Details,
-                ImageUrl = villaDto.ImageUrl,
-                Rate = villaDto.Rate,
-                Id = villaDto.Id,
-            };
-
-            _db.Villas.Update(model);
+            // Save changes to the database
+            _db.Villas.Update(existingVilla);
             _db.SaveChanges();
 
-
-            return Ok(existingVilla);
+            return Ok(villaDto);
         }
+
 
 
 
