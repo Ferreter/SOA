@@ -1,7 +1,151 @@
 ﻿@page "/"
+@inject HttpClient Http
+@using VillaMon_API.Models.Dto
 
-<PageTitle>Home</PageTitle>
+<h3>Welcome to Villa Management</h3>
 
-<h1>Hello, world!</h1>
+<!-- Available Villas -->
+<h4>Available Villas</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Rate</th>
+            <th>Occupancy</th>
+            <th>Location</th>
+            <th>Amenities</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (availableVillas != null && availableVillas.Any())
+        {
+            @foreach (var villa in availableVillas)
+            {
+                <tr>
+                    <td>@villa.Name</td>
+                    <td>@villa.Rate</td>
+                    <td>@villa.Occupancy</td>
+                    <td>@villa.Location</td>
+                    <td>@villa.Amenity</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="5">No available villas found.</td>
+            </tr>
+        }
+    </tbody>
+</table>
 
-Welcome to your new app.
+<!-- Current Bookings -->
+<h4>Current Bookings</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Guest Name</th>
+            <th>Check-In Date</th>
+            <th>Check-Out Date</th>
+            <th>Villa ID</th>
+            <th>Guest Count</th>
+            <th>Payment Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (currentBookings != null && currentBookings.Any())
+        {
+            @foreach (var booking in currentBookings)
+            {
+                <tr>
+                    <td>@booking.GuestName</td>
+                    <td>@booking.CheckInDate.ToShortDateString()</td>
+                    <td>@booking.CheckOutDate.ToShortDateString()</td>
+                    <td>@booking.VillaId</td>
+                    <td>@booking.GuestCount</td>
+                    <td>@booking.PaymentStatus</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="6">No current bookings found.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Villas by Occupancy -->
+<h4>Villas by Occupancy</h4>
+<div class="form-group">
+    <label for="occupancyFilter">Filter by Occupancy:</label>
+    <input type="number" @bind="occupancyFilter" id="occupancyFilter" class="form-control" placeholder="Enter occupancy number" />
+    <button @onclick="FilterVillasByOccupancy" class="btn btn-primary mt-2">Filter</button>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Rate</th>
+            <th>Occupancy</th>
+            <th>Location</th>
+            <th>Amenities</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (filteredVillas != null && filteredVillas.Any())
+        {
+            @foreach (var villa in filteredVillas)
+            {
+                <tr>
+                    <td>@villa.Name</td>
+                    <td>@villa.Rate</td>
+                    <td>@villa.Occupancy</td>
+                    <td>@villa.Location</td>
+                    <td>@villa.Amenity</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="5">No villas found for the selected occupancy.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private List<VillaDTO> availableVillas;
+    private List<BookingDTO> currentBookings;
+    private List<VillaDTO> filteredVillas;
+    private int occupancyFilter = 1; // Default filter value
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadAvailableVillas();
+        await LoadCurrentBookings();
+    }
+
+    private async Task LoadAvailableVillas()
+    {
+        // Fetch all available villas
+        availableVillas = await Http.GetFromJsonAsync<List<VillaDTO>>("VillaAPI");
+
+        // Filter only available villas
+        availableVillas = availableVillas.Where(v => v.IsAvailable).ToList();
+    }
+
+    private async Task LoadCurrentBookings()
+    {
+        // Fetch all current bookings
+        currentBookings = await Http.GetFromJsonAsync<List<BookingDTO>>("BookingAPI");
+    }
+
+    private void FilterVillasByOccupancy()
+    {
+        // Filter villas by occupancy
+        filteredVillas = availableVillas.Where(v => v.Occupancy >= occupancyFilter).ToList();
+    }
+}

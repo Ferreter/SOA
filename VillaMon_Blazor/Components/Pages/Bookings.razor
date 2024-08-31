@@ -71,7 +71,7 @@
 
     private async Task DeleteBooking(int id)
     {
-        await Http.DeleteAsync($"BookingAPI/{id}");
+         Http.DeleteAsync($"BookingAPI/{id}");
         await LoadBookings();
     }
 }
