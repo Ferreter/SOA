@@ -1,0 +1,72 @@
+VillaMonAPIapi - Microsoft Azure
+https://portal.azure.com/#@hkhatri731gmail.onmicrosoft.com/resource/subscriptions/8f8a3737-37b2-454b-8a30-7f0db0693848/resourceGroups/VillaMonAPI20240831163446ResourceGroup/providers/Microsoft.ApiManagement/service/VillaMonAPIapi/apim-apis
+
+VillaMonAPIapi - Microsoft Azure
+https://portal.azure.com/#@hkhatri731gmail.onmicrosoft.com/resource/subscriptions/8f8a3737-37b2-454b-8a30-7f0db0693848/resourceGroups/VillaMonAPI20240831163446ResourceGroup/providers/Microsoft.ApiManagement/service/VillaMonAPIapi/apim-apis
+
+
+HTTP Error 500.30 - ASP.NET Core app failed to start
+https://villamonapi20240831163446.azurewebsites.net/
+
+Collect Windows event log data sources with Log Analytics agent in Azure Monitor - Azure Monitor | Microsoft Learn
+https://learn.microsoft.com/en-us/azure/azure-monitor/agents/data-sources-windows-events
+
+HTTP Error 500.30 - ASP.NET Core app failed to start Common solutions to this issue: The app failed to start The app started but then stopped The app started but threw an exception during startup Troubleshooting steps: Check the system event log for error messages Enable logging the application process' stdout messages Attach a debugger to the application process and inspect For more guidance on diagnosing and handling these errors, visit Troubleshoot ASP.NET Core on Azure App Service and IIS. - Google Search
+https://www.google.com/search?q=HTTP+Error+500.30+-+ASP.NET+Core+app+failed+to+start+Common+solutions+to+this+issue%3A+The+app+failed+to+start+The+app+started+but+then+stopped+The+app+started+but+threw+an+exception+during+startup+Troubleshooting+steps%3A+Check+the+system+event+log+for+error+messages+Enable+logging+the+application+process%27+stdout+messages+Attach+a+debugger+to+the+application+process+and+inspect+For+more+guidance+on+diagnosing+and+handling+these+errors%2C+visit+Troubleshoot+ASP.NET+Core+on+Azure+App+Service+and+IIS.&oq=HTTP+Error+500.30+-+ASP.NET+Core+app+failed+to+start+Common+solutions+to+this+issue%3A+The+app+failed+to+start+The+app+started+but+then+stopped+The+app+started+but+threw+an+exception+during+startup+Troubleshooting+steps%3A+Check+the+system+event+log+for+error+messages+Enable+logging+the+application+process%27+stdout+messages+Attach+a+debugger+to+the+application+process+and+inspect+For+more+guidance+on+diagnosing+and+handling+these+errors%2C+visit+Troubleshoot+ASP.NET+Core+on+Azure+App+Service+and+IIS.&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzU3MWowajSoAgCwAgE&sourceid=chrome&ie=UTF-8
+
+Troubleshoot ASP.NET Core on Azure App Service and IIS | Microsoft Learn
+https://learn.microsoft.com/en-us/aspnet/core/test/troubleshoot-azure-iis?view=aspnetcore-8.0
+
+HTTP/1.1 500 Internal Server Error cache-control: private content-length: 2416 content-type: text/html date: Sat, 31 Aug 2024 15:49:38 GMT vary: Origin x-powered-by: ASP.NET - Google Search
+https://www.google.com/search?q=HTTP%2F1.1+500+Internal+Server+Error+cache-control%3A+private+content-length%3A+2416+content-type%3A+text%2Fhtml+date%3A+Sat%2C+31+Aug+2024+15%3A49%3A38+GMT+vary%3A+Origin+x-powered-by%3A+ASP.NET&oq=HTTP%2F1.1+500+Internal+Server+Error+cache-control%3A+private+content-length%3A+2416+content-type%3A+text%2Fhtml+date%3A+Sat%2C+31+Aug+2024+15%3A49%3A38+GMT+vary%3A+Origin+x-powered-by%3A+ASP.NET&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg60gEHNjU1ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+
+.net - Internal Server Error (500) with HttpWebRequest - Stack Overflow
+https://stackoverflow.com/questions/11115012/internal-server-error-500-with-httpwebrequest
+
+Troubleshoot ASP.NET Core on Azure App Service and IIS | Microsoft Learn
+https://learn.microsoft.com/en-gb/aspnet/core/test/troubleshoot-azure-iis?view=aspnetcore-7.0#50030-in-process-startup-failure
+
+Diagnostics and solve tool - Azure App Service | Microsoft Learn
+https://learn.microsoft.com/en-us/azure/app-service/overview-diagnostics#open-app-service-diagnostics
+
+iis - HTTP Error 500.30 - ASP.NET Core app failed to start - Stack Overflow
+https://stackoverflow.com/questions/67211060/http-error-500-30-asp-net-core-app-failed-to-start
+
+Publish an ASP.NET Core web API to Azure API Management with Visual Studio | Microsoft Learn
+https://learn.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-api-management-using-vs?view=aspnetcore-8.0
+
+Deleting data from tables - IBM Documentation
+https://www.ibm.com/docs/en/db2-for-zos/12?topic=programs-deleting-data-from-tables
+
+Call a web API from an ASP.NET Core Blazor app | Microsoft Learn
+https://learn.microsoft.com/en-us/aspnet/core/blazor/call-web-api?view=aspnetcore-8.0
+
+Enable Cross-Origin Requests (CORS) in ASP.NET Core | Microsoft Learn
+https://learn.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-8.0
+
+Add references in the Reference Manager - Visual Studio (Windows) | Microsoft Learn
+https://learn.microsoft.com/en-us/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager?view=vs-2022
+
+ASP.NET Core Identity Series - Code Maze
+https://code-maze.com/asp-net-core-identity-series/
+
+Adding authentication to .net core web api : r/dotnet
+https://www.reddit.com/r/dotnet/comments/14df0pg/adding_authentication_to_net_core_web_api/
+
+visual studio - Tests not running in Test Explorer - Stack Overflow
+https://stackoverflow.com/questions/23363073/tests-not-running-in-test-explorer
+
+DotNetMastery - Ultimate training for ASP.NET Developer
+https://www.dotnetmastery.com/Home/Details?courseId=24
+
+Download SQL Server Management Studio (SSMS) - SQL Server Management Studio (SSMS) | Microsoft Learn
+https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16#download-ssms
+
+directory - How can I Git ignore subfolders / subdirectories? - Stack Overflow
+https://stackoverflow.com/questions/2545602/how-can-i-git-ignore-subfolders-subdirectories
+
+Fix connection errors - Google Chrome Help
+https://support.google.com/chrome/answer/6098869#-207
+
+asp.net mvc - Your connection is not private NET::ERR_CERT_COMMON_NAME_INVALID - Stack Overflow
+https://stackoverflow.com/questions/44066709/your-connection-is-not-private-neterr-cert-common-name-invalid
